@@ -1,36 +1,6 @@
-import { useEffect } from "react"
-import { useDispatch, useSelector } from "react-redux"
-import { getProducts } from "../../store/features/products/productsSlice"
-import {ProductList}from "../components/ProductList"
-
-const HomePage =() => {
-
-    const dispatch = useDispatch()
-
-    useEffect(() => {
-        dispatch(getProducts())
-    }, [])
-
-    const { products, error, loading } =useSelector(state => state.productlist)
-
-    if(error) {
-        return (
-            <div className="mt-10">
-                <p className="text-red-500">{error }</p>
-            </div>
-
-        )
-    }
+const HomePage = () => {
     return (
-        <div className="mt-10"> 
-            {
-                loading
-                ? <ProductList.Skeleton />
-                : <ProductList products={products} />
-            }
-            
-            
-        </div>
+        <div>HomePage</div>
     )
 }
 export default HomePage

@@ -1,12 +1,6 @@
-import ShoppingCart from "../components/ShppingCart"
-
-const CheckoutPage = () => {
+const CheckoutPage =() => {
     return(
-        <div className="mt-10">
-          <div className="bg-white rounded-lg">
-          <ShoppingCart isCheckoutPage />
-          </div>
-        </div>
+        <div>CheckoutPage</div>
     )
 }
 export default CheckoutPage
